@@ -1,0 +1,33 @@
+/*
+** AirbusConstructor.c for airbusConstructor in /home/corbac_b/work/piscine/cpp/D01A/ex_1
+** 
+** Made by anthony1 corbacho
+** Login   <corbac_b@epitech.net>
+** 
+** Started on  Mon May  3 16:28:22 2010 anthony1 corbacho
+// Last update Mon May  3 17:01:38 2010 anthony1 corbacho
+*/
+
+#include        <stdlib.h>
+#include        <string.h>
+#include        "AirbusPlane.h"
+#include	"AirbusConstructor.h"
+
+AirbusConstructor::AirbusConstructor(char const *PlaneName, int StartingId)
+{
+  _PlaneName = strdup(PlaneName);
+  _StartingId = StartingId;
+}
+
+AirbusConstructor::~AirbusConstructor()
+{
+  free(_PlaneName);
+}
+
+Plane		AirbusConstructor::CreatePlane()
+{
+  Plane		plane(this->_PlaneName, this->_StartingId);
+
+  this->_StartingId += 1;
+  return (plane);
+}

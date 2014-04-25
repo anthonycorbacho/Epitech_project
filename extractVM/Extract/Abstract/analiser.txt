@@ -1,0 +1,40 @@
+push int32(42);
+push float(1.5);
+dump;
+
+multiply
+dump;
+push double(0.0);
+push int32(7770)
+dump
+divide
+push int32(333)
+push int32(33333333333333333333);
+add
+; Here the stack contains two elements
+dump
+;add
+; The two operands on the stack are added then poped
+; The result is then pushed onto the stack
+
+;push float(44.55)
+;push double(42.42)
+;push int32(42)
+; Here the stack contains two values, the result of the
+; addition and the value 44.55
+;dump
+;mul
+; the two values are then multiplied
+
+;push double(42.42)
+;push int32(42)
+
+;dump ; Comments can also be at the end of a line
+; Then dump the content of the stack
+
+;pop
+; Pop the value on top of the stack
+
+;assert double(42.42)
+; This opcode may stop the execution of the program if 
+; the value on top of the stack does not equal the operand.>>>>>>> .r92

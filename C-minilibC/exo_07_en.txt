@@ -1,0 +1,135 @@
+	Any precision request will make the project more complex.
+
+	Subject can change until one hour before due time.
+
+01) create your library my, it will be located in ~/rendu/lib/my/ and be
+    named libmy.a
+
+That library must contain ALL of the following functions:
+
+void	my_putchar(char c);
+int	my_isneg(int n);
+int	my_put_nbr(int nb);
+int	my_swap(int *a, int *b);
+int     my_putstr(char *str);
+int	my_strlen(char *str);
+int	my_getnbr(char *str);
+void	my_sort_int_tab(int *tab, int size);
+int	my_power_rec(int nb, int power);
+int	my_square_root(int nb);
+int	my_is_prime(int nombre);
+int	my_find_prime_sup(int nb);
+char	*my_strcpy(char *dest, char *src);
+char	*my_strncpy(char *dest, char *src, int n);
+char	*my_revstr(char *str);	  
+char	*my_strstr(char *str, char *to_find);
+int	my_strcmp(char *s1, char *s2);
+int	my_strncmp(char *s1, char *s2, int n);
+char	*my_strupcase(char *str);
+char	*my_strlowcase(char *str);
+char	*my_strcapitalize(char *str);
+int	my_str_isalpha(char *str);
+int	my_str_isnum(char *str);
+int	my_str_islower(char *str);
+int	my_str_isupper(char *str);
+int	my_str_isprintable(char *str);
+int	my_showstr(char *str);
+int	my_showmem(char *str, int size);
+char	*my_strcat(char *str1, char *str2);
+char	*my_strncat(char *str1, char *str2, int n);
+int	my_strlcat(char *str1, char *str2, int n);
+
+Your library libmy.a must IMPERATIVELLY be located at
+~/rendu/lib/my/ since it will be used to compile all of
+your other programs (you therefore don't need to put
+the source code for functions that are in your lib).
+
+Usual permissions have to be applied (710/710/750/640)
+
+For this day, you'll have to code the three following
+functions and include them to your lib my:
+
+- Write a function that copies a string of characters to
+  the end of another (see appropriate man page).
+  Function will be prototyped as follows:
+
+  char	*my_strcat(char *str1, char *str2);
+
+  hint:	man strcat
+
+
+- Write a function that copies n characters from a string of
+  characters to the end of another.
+  Functionn will be prototyped as follows:
+
+  char	*my_strncat(char *str1, char *str2, int n);
+
+  hint: man strncat
+
+
+- Write a function that copies a string of characters to the
+  end of another, ensuring that the resulting string is not
+  longer than l.
+
+  int	my_strlcat(char *str1, char *str2, int l);
+
+  hint: man strlcat
+
+  AGAIN: any precision request will make the subject harder.
+
+
+02) Write a PROGRAM that prints its command line parameters.
+    All .c files required by the program will be located in
+    ~/rendu/piscine/Jour_07/my_aff_params/
+
+    It is a PROGRAM, a main function is required in that
+    directory.
+
+    The automated testing program will do the following:
+        cd ~/rendu/piscine/Jour_07/my_aff_params/
+	cc *.c -L${HOME}/rendu/lib/my -lmy
+	./a.out
+
+    You must print all parameters, including argv[0].
+    Also, each parameters will be printed on distinct
+    lines, by themselves.
+
+    Ex:
+     $>./a.out test "This is a    test  " retest | cat -e
+     ./a.out$
+     test$
+     This is a    test  $
+     retest$
+     $>
+
+03) Write a PROGRAM that prints all of its command line parameters,
+    in reverse order.
+    All .c files required by the program will be located in
+    ~/rendu/piscine/Jour_07/my_rev_params/
+
+    You must print all parameters, including argv[0].
+    Also, each parameters will be printed on distinct
+    lines, by themselves.
+    Ex:
+     $>./a.out test "This is a    test  " retest | cat -e
+     ./a.out$
+     retest$
+     This is a    test  $
+     test$
+     $>
+
+04) Write a PROGRAM that prints its command line parameters sorted
+    by ASCII order.
+    All .c files required by the program will be located in
+    ~/rendu/piscine/Jour_07/my_sort_params/
+
+    You must print all parameters, including argv[0].
+    Also, each parameters will be printed on distinct
+    lines, by themselves.
+    Ex:
+     $>./a.out test "This is a    test  " retest | cat -e
+     ./a.out$
+     This is a    test  $
+     retest$
+     test$
+     $>

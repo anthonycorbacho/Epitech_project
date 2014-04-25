@@ -1,0 +1,2 @@
+LD_LIBRARY_PATH=LIEN_VERS/zappy_2012s_coppel_a/lib/
+LD_PRELOAD=libfmod-3.75.so
